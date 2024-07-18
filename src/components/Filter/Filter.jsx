@@ -9,7 +9,7 @@ export const Filter = () => {
   const handleFilterChange = (ev) => {
     const filterInputValue = ev.target.value;
     setFilterInput(filterInputValue);
-    dispatch(change(filterInput));
+    dispatch(change(filterInputValue));
   };
 
   return (
@@ -19,7 +19,6 @@ export const Filter = () => {
         type="text"
         name="filter"
         placeholder="Search by name"
-        value={filterInput}
         onChange={handleFilterChange}
       />
     </div>
