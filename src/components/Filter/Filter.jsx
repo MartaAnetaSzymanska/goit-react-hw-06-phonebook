@@ -1,11 +1,14 @@
 import { useDispatch } from "react-redux";
 import { change } from "../../redux/filterSlice";
+import { useState } from "react";
 
 export const Filter = () => {
   const dispatch = useDispatch();
+  const [filterInput, setFilterInput] = useState("");
 
   const handleFilterChange = (ev) => {
-    const filterInput = ev.target.value;
+    const filterInputValue = ev.target.value;
+    setFilterInput(filterInputValue);
     dispatch(change(filterInput));
   };
 
