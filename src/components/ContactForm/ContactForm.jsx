@@ -1,9 +1,8 @@
 import { nanoid } from "nanoid";
 import styles from "./ContactForm.module.scss";
-import { useDispatch } from "react-redux";
-import { useSelector } from "react-redux";
-import { addContact } from "../redux/contactsSlice";
-import { getContacts } from "../redux/selectors";
+import { useDispatch, useSelector } from "react-redux";
+import { addContact } from "../../redux/contactsSlice";
+import { getContacts } from "../../redux/selectors";
 
 export const ContactForm = () => {
   const nameId = nanoid();
